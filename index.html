@@ -61,7 +61,12 @@
 <body>
 
 <header>
-  <h1>Marcio Vanzo - Página em Construção - 04/2026</h1>
+  <!-- seu comentário aqui 
+     <h1>Marcio Vanzo - Página em Construção - 04/2026</h1>
+  <p>Projetos em Java | Spring Boot</p>
+
+  -->
+  <h1 id="titulo"></h1>
   <p>Projetos em Java | Spring Boot</p>
 </header>
 
@@ -72,7 +77,7 @@
 
     <p>
       Aplicação desenvolvida em Java com Spring Boot para geração de etiquetas personalizadas em PDF.
-      O sistema permite inserir nome e telefone e gerar automaticamente um arquivo pronto para impressão.
+      O sistema permite inserir nome e telefone e gerar automaticamente um  arquivo pronto para impressão.
     </p>
 
     <p><strong>Tecnologias:</strong> Java, Spring Boot</p>
@@ -97,6 +102,14 @@
 <footer>
   <p>© 2026 - Marcio Vanzo</p>
 </footer>
+
+<script>
+  const hoje = new Date();
+  const dataCompleta = hoje.toLocaleDateString('pt-BR');
+
+  document.getElementById("titulo").innerText =
+    `Marcio Vanzo - Página em Construção - Última atualização: ${dataCompleta}`;
+</script>
 
 </body>
 </html>
