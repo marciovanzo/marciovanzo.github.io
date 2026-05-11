@@ -104,11 +104,17 @@
 </footer>
 
 <script>
-  const hoje = new Date();
-  const dataCompleta = hoje.toLocaleDateString('pt-BR');
+fetch("https://api.github.com/repos/marciovanzo/marciovanzo.github.io/commits")
+  .then(response => response.json())
+  .then(data => {
+    const dataCommit = new Date(data[0].commit.committer.date);
 
-  document.getElementById("titulo").innerText =
-    `Marcio Vanzo - Página em Construção - Última atualização: ${dataCompleta}`;
+    const dataFormatada =
+      dataCommit.toLocaleDateString('pt-BR');
+
+    document.getElementById("titulo").innerText =
+      `Marcio Vanzo - Página em Construção - Última atualização: ${dataFormatada}`;
+  });
 </script>
 
 </body>
